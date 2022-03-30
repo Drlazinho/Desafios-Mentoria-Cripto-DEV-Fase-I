@@ -7,64 +7,68 @@
 }
 
 body {
-  background-color: black;
-  color: white;
+  color: #fff;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 
-p {
+p, li {
   font-size: 20px;
 }
-
-i { color: white;}
-
+ul{
+  list-style: none;
+}
+i {
+  font-size: 30px;
+}
 section{
+  padding: 40px 0;
 }
 
-.cabeçalho {
-  background-color: rgb(99, 99, 248);
-  border-radius: 20px;
-  padding: 40px;
+.curriculo{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 60px;
-  text-align: center;
+}
+
+.coluna-esquerda {
+  max-width: 30vw;
+  min-width: 350px;
+  background-color: rgb(31, 6, 54);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  color: white;
-}
-
-.contacts {
-  width: 500px;
-  display: flex;
   gap: 20px;
-  margin: auto;
 }
-
-.contacts a {
-  display: flex;
-  gap: 20px;
-  transition: .3s linear;
-}
-
-.contacts a:hover{
-  filter: brightness(150%);
-  text-decoration: underline;
-}
-
-iframe{
-  border: 0;
-  scrollbar-base-color: blue;
-}
-
-.contacts img {
-  width: 60px;
-}
-
-.cabeçalho img {
+.coluna-esquerda .foto-perfil{
+  width: 200px;
   border-radius: 50%;
+}
+.coluna-esquerda .dados-pessoais .item-pessoal{
+  width: 280px;
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.coluna-esquerda .dados-pessoais .item-pessoal p{
+  text-align: left;
+}
+.coluna-esquerda .languages {
+  display: flex;
+  gap: 40px;
+  justify-content: space-around;
+}
+
+.coluna-esquerda .languages .language{
+  text-align: center;
+}
+.coluna-esquerda .languages .language img{
+  width: 50px;
+}
+
+.coluna-direita{
+  width: 100vw;
+  background-color: rgb(52, 49, 49);
 }
