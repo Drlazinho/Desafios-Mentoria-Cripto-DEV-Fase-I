@@ -53,7 +53,7 @@ section{
   border-radius: 50%;
 }
 .coluna-esquerda .dados-pessoais .item-pessoal{
-  width: 280px;
+  width: 80%;
   display: flex;
   justify-content: start;
   gap: 20px;
@@ -133,6 +133,7 @@ section{
 /*********** RESPONSIVDADE ***********/
 /************************************/
 @media (max-width:900px) {
+
   .curriculo{
     display: flex;
     flex-direction: column;
@@ -150,7 +151,34 @@ section{
     width: 100vw;
   }
   .coluna-esquerda{
+    height: calc(100vh + 40px);
     position: static;
     width: 100vw;
+    padding-bottom: 20px;
   }
 }
+
+@media(max-width: 420){
+  p, li {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 280px){
+  p, li {
+    font-size: 16px;
+  }
+
+  i {
+    font-size: 20px;
+  }
+
+  .title{
+    font-size: 30px;
+  }
+
+  .coluna-esquerda{
+    padding-right: 60px;
+  }
+}
+
