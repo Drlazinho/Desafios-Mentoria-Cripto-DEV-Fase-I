@@ -20,21 +20,28 @@ p, li {
 }
 ul{
   list-style: none;
+  line-height: 1.5;
 }
 i {
   font-size: 30px;
 }
 section{
-  padding: 40px 0;
+  padding: 40px 0px;
 }
 
-.curriculo{
-  display: flex;
+/*********** TÍTULO ***********/
+/*****************************/
+.title{
+  font-size: 50px;
+  text-align: center;
 }
 
+/*********** COLUNA ESQUERDA ***********/
+/**************************************/
 .coluna-esquerda {
-  max-width: 30vw;
-  min-width: 350px;
+  position: fixed;
+  height: 100vh;
+  min-width: 22rem;
   background-color: rgb(31, 6, 54);
   display: flex;
   flex-direction: column;
@@ -51,10 +58,20 @@ section{
   justify-content: start;
   gap: 20px;
   margin-bottom: 20px;
+  transition: .3s linear;
 }
 .coluna-esquerda .dados-pessoais .item-pessoal p{
   text-align: left;
 }
+.coluna-esquerda .dados-pessoais .item-pessoal:nth-last-child(-n+3):hover{
+  color: rgb(255, 68, 0);
+  transform: scale(1.1);
+} 
+.coluna-esquerda .dados-pessoais .item-pessoal:nth-last-child(-n+3):focus{
+  color: rgb(255, 68, 0);
+  transform: scale(1.1);
+} 
+
 .coluna-esquerda .languages {
   display: flex;
   gap: 40px;
@@ -68,7 +85,72 @@ section{
   width: 50px;
 }
 
+/*********** COLUNA DIREITA ***********/
+/**************************************/
 .coluna-direita{
-  width: 100vw;
+  margin-left: 350px;
   background-color: rgb(52, 49, 49);
+}
+
+.coluna-direita span{
+  font-weight: bold;
+  color: rgb(132, 132, 245);
+  transition: .3s linear;
+}
+
+.coluna-direita span:hover{
+  color: rgb(255, 68, 0);
+}
+
+.coluna-direita .info {
+  margin: 20px 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(161, 152, 152);
+}
+
+.coluna-direita .info h2 {
+  margin-bottom: 16px;
+}
+
+.coluna-direita .info .skill {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.coluna-direita footer{
+  text-align: center;
+  filter: brightness(50%);
+  font-size: 14px;
+}
+
+/*********** RESPONSIVDADE ***********/
+/************************************/
+@media (max-width:900px) {
+  .curriculo{
+    display: flex;
+    flex-direction: column;
+  }
+  .title{
+    font-size: 40px;
+  }
+
+  .curriculo .foto-perfil{
+    width: 30%;
+  }
+
+  .coluna-direita{
+    margin-left: 0;
+    width: 100vw;
+  }
+  .coluna-esquerda{
+    position: static;
+    width: 100vw;
+  }
 }
