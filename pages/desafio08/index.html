@@ -6,34 +6,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistemas de Alunos - Gama Academy</title>
 </head>
+
+<style>
+  body{
+    background-color: rgb(89, 142, 188);
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 100px;
+  }
+  form{
+      margin: 0 auto;
+      width: 500px;
+      background-color: rgb(168, 67, 236);
+      color: aliceblue;
+      text-align: left;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  legend{
+    font-size: larger;
+    text-align: center;
+  }
+
+  input{
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: large;
+    margin-bottom: 20px;
+    outline: none;
+  }
+
+  input[type=button]{
+    cursor: pointer;
+    transition: .2s;
+    width: 100%;
+  }
+  input[type=button]:hover{
+    background-color: rgb(46, 203, 46);
+  }
+
+  #resultado{
+    text-align: center;
+  }
+
+</style>
+
 <body>
-  <div style="padding: 20px;
+   <div style="padding: 20px;
   position: fixed;
   top: 20px;
   left: 20px;
   background-color: greenyellow;
-  border-radius: 20px;">
-    <a href="/index.html">Voltar para<br>
+  border-radius: 20px;
+  ">
+    <a style="color: #000;
+ font-size: 20px; " href="/index.html">Voltar para<br>
       o Menu</a>
   </div>
 
-
-  <h1>Desafio 08 - Laço de Repetição</h1>
+  <h1>Sistemas de Alunos - Gama Academy</h1>
 
   <form id="formulario">
     <fieldset>
       <legend>Formulário</legend>
 
       <label>Quantidade de Registro:</label>
-      <input type="text" name="qtd" placeholder="Digite a quantidade de registro"><br>
+      <input type="text" name="qtd" placeholder="Digite a quantidade de registro"
+      size="45"><br>
 
       <label>Nome:</label>
-      <input type="text" name="nome" placeholder="Digite um nome:"><br>
+      <input type="text" name="nome" placeholder="Digite um nome:" size="45"><br>
 
       <label>Idade:</label>
-      <input type="text" name="idade" placeholder="Digite a idade da pessoa:"><br>
+      <input type="text" name="idade" placeholder="Digite a idade da pessoa:" size="45"><br>
 
-      <input type="button" value="Enviar" onclick="adicionar()">
+      <input type="button" value="Enviar" onclick="adicionar()" accesskey="Enter">
+
+      <p id="resultado"></p>
     </fieldset>
   </form>
 
@@ -42,16 +96,25 @@
   <script>
     const nomes = [];
     const idades = [];
-
-    // var registrarNome = formulario.nome.value;
-    // var registrarIdade = formulario.idade.value;
-
-    function adicionar(){
-      var quantidade=document.getElementById("qtd").value;
-      alert(quantidade);
-    }
+    var indice = 0;
     
+    function adicionar(){
+      var registrarNome = formulario.nome.value;
+      var registrarIdade = formulario.idade.value;
+      var registrarQtd = formulario.qtd.value;
+      
+      var listar_registro =  document.getElementById("resultado").innerHTML
+      nomes.push(registrarNome)
+      idades.push(registrarIdade)
+      
 
+      if (indice < registrarQtd){
+        document.getElementById("resultado").innerHTML = listar_registro = listar_registro + `${nomes[indice]} tem ${idades[indice]}  anos<br>`
+        
+        indice++
+        return        
+      }
+    }
   </script>
 </body>
 </html>
