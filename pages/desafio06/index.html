@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio - Formulário Gama Academy</title>
+</head>
+
+<script>
+  function validar(){
+    var yourName = cadastro.name_user.value;
+    var yourEmail = cadastro.email_user.value;
+    var yourPass = cadastro.password_user.value;
+    var yourPassRepeat = cadastro.repeat_password_user.value;
+
+    if(yourName==""){
+      alert("Por favor digite um nome válido");
+      cadastro.name_user.focus();
+      return false;
+    }
+
+    if(yourEmail==""){
+      alert("Por favor digite o seu email");
+      cadastro.email_user.focus();
+      return false;
+    }
+
+    if(yourPass==""){
+      alert("Digite sua senha");
+      cadastro.password_user.focus();
+      return false;
+    }
+
+    if(yourPassRepeat==""){
+      alert("Confirme sua senha");
+      cadastro.repeat_password_user.focus();
+      return false;
+    }
+
+    if(yourPass != yourPassRepeat){
+      alert("Suas senhas não são iguais");
+      cadastro.repeat_password_user.focus();
+      return false
+    }
+
+    alert(`Recebemos o seu cadastro, você pode confirmar no seu email ${yourEmail}, nos veremos em breve ${yourName}`)
+  }
+</script>
+
+<style>
+  body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(69, 118, 76);
+  }
+
+  h1{
+    text-align: center;
+    color: #fff;
+  }
+
+  form{
+    width: 400px;
+    background-color: rgb(165, 84, 241);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-top: 100px;
+  }
+
+  legend{
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  input{
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .btn{
+    width: 100%;
+    padding: 10px 30px;
+    margin: 20px 0px;
+    cursor: pointer;
+    transition: .2s linear;
+    background-color: rgb(51, 167, 61);
+  }
+
+  .btn:hover{
+    filter: brightness(140%);
+  
+  }
+
+</style>
+
+<body>
+  <div style="padding: 20px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: greenyellow;
+  border-radius: 20px;">
+    <a href="/index.html">Voltar para<br>
+      o Menu</a>
+  </div>
+
+  <form id="cadastro" method="post">
+    <fieldset>
+    <legend>Preencha os seus dados baixo para se cadastrar na nossa plataforma</legend>
+
+    <label>Nome:</label>
+    <input type="text" name="name_user" placeholder="Digite o seu nome" size="44"><br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email_user" placeholder="Digite o seu email" size="44"><br><br>
+
+    <label>Senha:</label>
+    <input type="password" name="password_user" placeholder="Crie a sua senha" size="44"><br><br>
+
+    <label>Confirmar Senha:</label>
+    <input type="password" name="repeat_password_user" placeholder="Confirma a sua senha" size="44">
+
+    <input type="button" class="btn" value="Enviar" onclick="validar()">
+  </fieldset>
+  </form>
+
+  <h1>Desafio da Mentoria 06 - Mentoria de dúvidas JS - 05/04/2022</h1>
+
+</body>
+</html>

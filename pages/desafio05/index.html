@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brincando com Javascript</title>
+</head>
+
+  <style>
+    body{
+      background-color: rgb(50, 208, 50);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    .box{
+      width: 600px;
+      height: auto;
+      background-color: blanchedalmond;
+      font-weight: bold;
+      margin-bottom: 100px;
+      text-align: center;
+    }
+
+  </style>
+
+  <body>
+    <div style="padding: 20px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: greenyellow;
+    border-radius: 20px;">
+      <a href="/index.html">Voltar para<br>
+        o Menu</a>
+    </div>
+
+    <div class="box">
+      <h1></h1>
+    </div>
+  </body>
+  
+  <script>
+    
+    let nome, idade, email;
+    let message = window.document.getElementsByTagName('h1')[0]
+
+    alert("Olá, bem vindo ao Mundo Cripto DEV. Aqui você terá acesso as melhores aulas e mentorias online com o Suuuuper prof Ricardo Bomtempo que vai te auxiliar a se tornar um desenvolvedor e entrar no mercado de trabalho na área de tecnologia. Mas precisamos de algumas informações vamos lá")
+
+    nome=prompt("Vamos lá! Digite o seu nome:");
+    idade=prompt("Digite a sua idade:");
+    email=prompt("Digite o seu melhor email:");
+    
+    alert(`Vamos confirmar as suas informações. Você se chama ${nome}, tem ${idade} anos, e o seu melhor email é ${email}`);
+
+    message.innerHTML = `Vamos confirmar as suas informações. Você se chama ${nome}, tem ${idade}, e o seu melhor email é ${email}`;
+
+  </script>
+<body>
+</body>
+</html>

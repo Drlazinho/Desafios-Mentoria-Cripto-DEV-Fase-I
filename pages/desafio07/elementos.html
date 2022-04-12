@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criação de Elementos com Javascript</title>
+ 
+</head>
+
+<style>
+  #page{
+    margin-left: 200px;
+  }
+
+  input[type="button"] {
+    padding: 20px;
+    color: #fff;
+    font-weight: bold;
+    filter: brightness(70%);
+  }
+  input[type="button"]:hover{
+    cursor: pointer;
+    filter: brightness(140%);
+  }
+
+  #red{
+    background-color: #ff0000;
+  }
+  #blue{
+    background-color: #0000ff;
+  }
+  #green{
+    background-color: #008000;
+  }
+  #yellow{
+    background-color: #ffff00;
+  }
+</style>
+
+
+<body id="page">
+  <div style="padding: 20px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: greenyellow;
+  border-radius: 20px;">
+    <a href="/index.html">Voltar para<br>
+      o Menu</a>
+  </div>
+
+  <h3>Sistema de Preenchimento de Informações</h3>
+  <label>Entre com o nome desejado:</label>
+  <input type="text" id="inserir_nome">
+  <input type="submit" onclick="processa_nome()" value="Processar" accesskey="enter">
+
+  <!-- Criando uma lista de nomes -->
+  <ul id="lista">
+
+  </ul>
+
+  <h2 id="lista_horizontal"></h2>
+
+  <input type="button" value="VERMELHO" id="red" onclick="red()">
+  <input type="button" value="AZUL" id="blue" onclick="blue()">
+  <input type="button" value="VERDE" id="green" onclick="green()">
+  <input type="button" value="AMARELO" id="yellow" onclick="yellow()">
+
+  <script>
+
+    function green() {
+      var page = document.getElementById("page")
+      page.style.backgroundColor = "#008000";
+    }
+
+    function red() {
+      var page = document.getElementById("page")
+      page.style.backgroundColor = "#ff0000";
+    }
+
+    function yellow() {
+      var page = document.getElementById("page")
+      page.style.backgroundColor = "#ffff00";
+    }
+
+    function blue() {
+      var page = document.getElementById("page")
+      page.style.backgroundColor = "#0000ff";
+    }
+
+
+    function processa_nome(){
+      var super_nome=document.getElementById("inserir_nome").value;
+      var list_nomes=document.getElementById("lista").innerHTML;
+
+      if(super_nome==""){
+        alert("Por favor preencha o campo com o nome")
+      } else {
+        list_nomes=list_nomes+"<li>"+super_nome+"</li>"
+        document.getElementById("lista_horizontal").innerHTML += `${super_nome}, `
+      }
+
+      document.getElementById('lista').innerHTML=list_nomes;
+      document.getElementById("inserir_nome").focus;
+
+      inserir_nome.value=""
+    }
+
+ 
+  </script>
+</body>
+
+</html>

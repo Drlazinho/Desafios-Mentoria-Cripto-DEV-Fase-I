@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrutura de Dados</title>
+</head>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(204, 204, 204);
+  padding: 40px;
+}
+
+
+</style>
+
+<body>
+  <div class="return" style="padding: 20px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: greenyellow;
+  border-radius: 20px;">
+    <a href="/index.html">Voltar para<br>
+      o Menu</a>
+  </div>
+
+  <div class="content">
+    <h1>Comando SQL</h1>
+    <p>
+      <pre>
+        <code>
+  -- CRIANDO BANCO DE DADOS
+  CREATE DATABASE gamaacademy_lazaropimentel
+  use gamaacademy_lazaropimentel
+  
+  -- CRIANDO TABELA
+  CREATE TABLE gamaacademy_lazaropimentel.produtos (
+    id_produto INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome_produto varchar(50) NOT NULL,
+    quantidade_produto integer NOT NULL,
+    valor_produto decimal NOT NULL;
+  )
+  
+  --INSERINDO REGISTRO
+  insert into gamaacademy_lazaropimentel.produtos
+  (nome_produto, quantidade_produto, valor_produto) VALUES
+  ("Monitor Gamer AOC Hero 27'", 100, 1699.90),
+  ("Monitor Gamer Husk 27'", 59, 1799.90),
+  ("TV OLed 60' LG", 10, 2999.90),
+  ("Geladeira Consul", 120, 2999.90),
+  ("Smartphone Xiaomi", 2000, 2599.90);
+        </code>
+      </pre>
+    </p>
+
+    <img src="./assets/desafiobanco.jpg" alt="" width="60%">
+  </div>
+
+</body>
+</html>
