@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  body {
+    background-color: rgb(116, 116, 223);
+    padding: 1rem;
+  }
+
+  h2 {
+    text-align: center;
+    color: #fff;
+  }
+
+  #calculadora {
+    background-color: rgb(120, 219, 201);
+    width: 90%;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  #entrada {
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 20px;
+    width: 80%;
+  }
+
+  .inputs {
+    display: flex;
+    flex: row;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+
+  input[type=button] {
+    width: 150px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: rgb(247, 247, 247);
+    transition: .2s;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+  }
+
+  input[type=button]:hover {
+    background-color: rgb(123, 250, 125);
+  }
+
+  #saida {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    .inputs{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+</style>
+
+<body>
+  <div>
+    <h2>Tabuada de multiplicação</h2>
+
+    <form action="" id="calculadora">
+
+      <div class="inputs">
+        <input name="entrada" id="entrada" type="number" placeholder="digite um número">
+        <input type="button" value="Multiplicar" onclick="multiplicar()">
+      </div>
+
+      <div id="saida"></div>
+    </form>
+
+  </div>
+  
+  <script>
+
+    function multiplicar() {
+      var numero = calculadora.entrada.value;
+      var tabuada = "";
+
+      if (numero == "") {
+        document.getElementById("saida").innerHTML = `Por favor digite um número`
+        alert("Por favor digite um número")
+      } else {
+        for (let i = 0; i <= 10; i++) {
+          tabuada += `<p>${numero} X ${i} = ${numero * i}</p>`
+          document.getElementById("saida").innerHTML = tabuada
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
