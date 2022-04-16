@@ -16,30 +16,35 @@
     background-color: rgb(87, 29, 141);
     color: #fff;
     text-align: center;
+    background-image: url(./pages/desafio10/imgs/logo-gama-academy.png);
   }
 
   .content{
     display: grid;
     justify-content: center;
-    width: 600px;
-    padding: 40px;
+    width: 70%;
+    padding: 40px 0;
     background-color: rgb(46, 190, 123);
     text-align: center;
+    align-items: center;
   }
 
   h2{
     text-align: center;
   }
   ul{
-    margin: auto;
+    padding: 0;
+    margin: 0;
   }
 
   li{
+    padding: 0;
+    width: 80%;
     list-style: none;
     font-size: 24px;
+    margin: 0 auto;
     margin-bottom: 10px;
     background-color: aliceblue;
-    max-width: 500px;
     transition: .2s linear;
   }
   li:hover{
@@ -57,18 +62,26 @@
     color: #000;
   }
 
+  details ul{
+    padding: 1rem;
+  }
+
   details li{
     display: block;
     margin: 20px auto;
-    width: 400px;
+    width: 90%;
+  }
+
+  details li:hover{
+    filter: brightness(125%);
   }
 
 
 </style>
 
 <body>
-  <h1>Desafios realizados durante as Mentorias de Cripto DEV Fase 1</h1>
   <div class="content">
+    <h1>Desafios realizados durante as Mentorias de Cripto DEV Fase 1</h1>
     <h2>Estudante: Lázaro Pimentel</h2>
     <ul>
       <li><a href="./pages/desafio03/index.html">Desafio Mentoria 04 - Criar um CV (Currículo Vitae)</a></li>
@@ -96,6 +109,7 @@
       </li>
       <li><a href="./pages/desafio08/index.html">Desafio Mentoria 08 - Sistemas de Alunos - Gama Academy</a></li>
       <li><a href="./pages/desafio09/index.html">Desafio Mentoria 09 - Tabuada de Multiplicação - Gama Academy</a></li>
+      <li><a href="./pages/desafio10/index.html">Desafio Mentoria 10 - Menu/Slide - Bootstrap - Gama Academy</a></li>
     </ul>
   </div>
 </body>

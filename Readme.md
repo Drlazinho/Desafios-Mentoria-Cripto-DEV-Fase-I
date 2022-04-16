@@ -12,6 +12,7 @@
     * Fazer uma página que mude a cor de fundo de acordo com a cor do botão clicado e que retorne uma lista de nomes, horizontal e vertical
 * Desafio da Mentoria 08 - Criar um formulário, em que entra com o nome e a idade considerando a quantidade de registros
 * Desafio da Mentoria 09 - Criar uma calculadora que retorne a tabuada de multiplicação (Responsivo).
+* Desafio da Mentoria 10 - Reproduzir uma Navbar e o slide do Site Gama Academy utilizando Bootstrap.
 
 ### Detalhes
 
